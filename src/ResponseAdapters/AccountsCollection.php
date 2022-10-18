@@ -18,6 +18,46 @@ class AccountsCollection extends BaseResponseAdapter implements \Iterator
     protected $position = 0;
 
     /**
+     * @return bool
+     */
+    public function getUsePaging()
+    {
+        return isset($this->responseData['pagination']);
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getPageSize()
+    {
+        return $this->responseData['page_size'] ?? null;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getPage()
+    {
+        return $this->responseData['page'] ?? null;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getTotalPages()
+    {
+        return $this->responseData['total_pages'] ?? null;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getTotalItemsCount()
+    {
+        return $this->responseData['total_items_count'] ?? null;
+    }
+
+    /**
      * reset position
      */
     public function rewind()
