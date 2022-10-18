@@ -1,2 +1,2 @@
 ## Install
-composer require brezgalov/pt-queue-api-client
+composer require brezgalov/pt-wallet-service-api-client
