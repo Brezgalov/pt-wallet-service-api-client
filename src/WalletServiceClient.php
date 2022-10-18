@@ -11,6 +11,15 @@ use yii\httpclient\Client;
 use yii\httpclient\Exception;
 use yii\httpclient\Request;
 
+/**
+ * Class WalletServiceClient
+ * @package Brezgalov\WalletServiceApiClient
+ *
+ * @property-write string $activityId
+ * @property-write string $authToken
+ * @property-write string $login
+ * @property-write string $pass
+ */
 class WalletServiceClient extends BaseApiClient
 {
     /**
@@ -87,7 +96,7 @@ class WalletServiceClient extends BaseApiClient
      * @param string $token
      * @return $this
      */
-    public function setAuthLogin(string $token)
+    public function setAuthToken(string $token)
     {
         $this->useAuthToken = true;
         $this->authToken = $token;
